@@ -47,6 +47,10 @@ catagoryDisplay();
 // ** Search products
 
 document.getElementById('search-input').addEventListener('keypress', async(event)=>{
+    // ** sppiner start
+    const sppiner = document.getElementById('sppiner');
+    sppiner.classList.remove('d-none')
+
     if (event.key === 'Enter') {
         const searchFieldValue = document.getElementById('search-input').value;
         const searchResultContainer = document.getElementById('search-results');
@@ -83,5 +87,8 @@ document.getElementById('search-input').addEventListener('keypress', async(event
 
             searchResultContainer.appendChild(cardContent);
         })
+
+        // ** Sppiner sttoped
+        sppiner.classList.add('d-none')
     }
 })
