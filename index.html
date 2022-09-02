@@ -29,6 +29,9 @@
           Press Enter
         </button>
       </div>
+      <h3 id="no-data" class="text-center text-warning d-none">
+        No data found
+      </h3>
     </header>
     <main class="container">
       <section>
@@ -40,7 +43,13 @@
               <ul class="list-group list-group-flush" id="unordered-list"></ul>
             </div>
           </div>
-          <div class="col-lg-8"></div>
+          <div class="col-lg-8">
+            <!-- ** Display results -->
+            <div
+              class="row row-cols-1 row-cols-md-2 g-4"
+              id="search-results"
+            ></div>
+          </div>
         </div>
       </section>
     </main>
