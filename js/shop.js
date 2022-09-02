@@ -48,8 +48,7 @@ catagoryDisplay();
 
 document.getElementById('search-input').addEventListener('keypress', async(event)=>{
     // ** sppiner start
-    const sppiner = document.getElementById('sppiner');
-    sppiner.classList.remove('d-none')
+    sppiner(true)
 
     if (event.key === 'Enter') {
         const searchFieldValue = document.getElementById('search-input').value;
@@ -89,6 +88,16 @@ document.getElementById('search-input').addEventListener('keypress', async(event
         })
 
         // ** Sppiner sttoped
-        sppiner.classList.add('d-none')
+        sppiner(false)
     }
-})
+});
+
+
+// ** sppiner functionality
+
+const sppiner = (isSppiner)=>{
+
+    isSppiner ? document.getElementById('sppiner').classList.remove('d-none') : document.getElementById('sppiner').classList.add('d-none')
+
+    
+}
